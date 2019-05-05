@@ -42,7 +42,7 @@ class MainViewTableViewController: UITableViewController {
         //print("Stored karma is ", Public.tasks)
     }
     func loadTasks() -> Array<Any>{
-        if let x = UserDefaults.standard.array(forKey:"tasksKey") {
+        if UserDefaults.standard.array(forKey:"tasksKey") != nil {
             return UserDefaults.standard.array(forKey:"tasksKey")!
         } else {return ["Hello"]}
         
@@ -82,8 +82,12 @@ class MainViewTableViewController: UITableViewController {
         
         Public.tasks = loadTasks() as! [String]
         if Public.tasks.isEmpty == true{
-            let simple = "Simple"
-            Public.tasks.append(simple)
+            let simple1 = "Swipe left to Done"
+            let simple2 = "Swipe right to Prioritize task"
+            let simple3 = "Tap + to add new tasks"
+            Public.tasks.append(simple1)
+            Public.tasks.append(simple2)
+            Public.tasks.append(simple3)
             saveTasks(tasks: Public.tasks)
         }
         tableView.dataSource = self

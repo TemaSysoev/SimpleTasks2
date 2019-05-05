@@ -29,6 +29,7 @@
                                         <segue destination="8BF-ft-l7v" kind="presentation" id="qSr-Gj-elR"/>
                                     </connections>
                                 </barButtonItem>
+                                <barButtonItem systemItem="flexibleSpace" id="hTD-RS-9fF"/>
                             </items>
                         </toolbar>
                         <prototypes>
@@ -94,15 +95,35 @@
                                     <action selector="addAction:" destination="8BF-ft-l7v" eventType="touchUpInside" id="Lkn-fF-E1i"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JTr-9J-qen">
+                                <rect key="frame" x="16" y="20" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="MeG-OO-Jeu"/>
+                                    <constraint firstAttribute="height" constant="30" id="sKz-vj-6a3"/>
+                                </constraints>
+                                <state key="normal" title="Settings"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4U-PH-6ZV">
+                                <rect key="frame" x="102" y="20" width="72" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="72" id="O46-Kr-TLT"/>
+                                    <constraint firstAttribute="height" constant="30" id="gni-MG-89p"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oud-E2-yHc" firstAttribute="leading" secondItem="zBc-L9-KH1" secondAttribute="leading" constant="16" id="62O-OQ-pvg"/>
                             <constraint firstItem="oud-E2-yHc" firstAttribute="top" secondItem="zBc-L9-KH1" secondAttribute="top" constant="67" id="FLc-Ks-UdI"/>
+                            <constraint firstItem="o4U-PH-6ZV" firstAttribute="top" secondItem="zBc-L9-KH1" secondAttribute="top" id="HZl-Wt-1d1"/>
                             <constraint firstItem="W2K-Eo-MGa" firstAttribute="top" secondItem="zBc-L9-KH1" secondAttribute="top" id="TNe-cI-Jd8"/>
                             <constraint firstItem="zBc-L9-KH1" firstAttribute="trailing" secondItem="oud-E2-yHc" secondAttribute="trailing" constant="16" id="Vvm-aa-hPl"/>
                             <constraint firstItem="zBc-L9-KH1" firstAttribute="trailing" secondItem="W2K-Eo-MGa" secondAttribute="trailing" constant="16" id="aJU-52-Lze"/>
+                            <constraint firstItem="o4U-PH-6ZV" firstAttribute="leading" secondItem="zBc-L9-KH1" secondAttribute="leading" constant="102" id="dKx-Rf-rAP"/>
+                            <constraint firstItem="JTr-9J-qen" firstAttribute="leading" secondItem="zBc-L9-KH1" secondAttribute="leading" constant="16" id="ekG-SY-D8d"/>
+                            <constraint firstItem="JTr-9J-qen" firstAttribute="top" secondItem="zBc-L9-KH1" secondAttribute="top" id="nP8-h4-mgx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zBc-L9-KH1"/>
                     </view>
