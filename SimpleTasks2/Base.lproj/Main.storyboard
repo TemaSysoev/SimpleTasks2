@@ -25,6 +25,7 @@
                                 <barButtonItem systemItem="add" id="SeZ-eq-BuY">
                                     <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <connections>
+                                        <action selector="showAddTask:" destination="8s2-GR-qEE" id="W57-z8-ziL"/>
                                         <segue destination="8BF-ft-l7v" kind="presentation" id="qSr-Gj-elR"/>
                                     </connections>
                                 </barButtonItem>

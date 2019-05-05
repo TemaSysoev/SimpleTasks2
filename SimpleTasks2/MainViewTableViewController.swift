@@ -52,7 +52,7 @@ class MainViewTableViewController: UITableViewController {
     
     @IBAction func showAddTask(_ sender: Any) {
         
-        
+        self.saveTasks(tasks: Public.tasks)
         //SPStorkController.updatePresentingController(modal: controller)
     }
         
@@ -178,9 +178,12 @@ class MainViewTableViewController: UITableViewController {
             let movingElement = Public.tasks.remove(at: indexPath.row)
             let index = IndexPath(row: 0, section: 0)
             Public.tasks.insert(movingElement, at: 0)
+            Public.tasks[0] = "❕" + Public.tasks[0]
             self.tableView.reloadData()
             //self.tableView.cellForRow(at: index)?.backgroundColor = UIColor(red:0.76, green:0.76, blue:0.76, alpha:1.0)
-            self.tableView.cellForRow(at: index)?.textLabel!.font = UIFont.boldSystemFont(ofSize: 16.0)
+            
+            self.tableView.cellForRow(at: index)?.textLabel!.font = UIFont.boldSystemFont(ofSize: 18.0)
+            
             self.saveTasks(tasks: Public.tasks)
         }
         action.backgroundColor = UIColor(red:0.50, green:0.50, blue:0.50, alpha:1.0)
