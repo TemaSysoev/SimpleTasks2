@@ -72,7 +72,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
             
         }
         if nameTextField.text == ""{
-            Public.newTaskPublic = "Have a good day"
+            Public.newTaskPublic = "New tasks"
         }
         
         Public.tasks.append(Public.newTaskPublic)

@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--My todos-->
+        <!--Tasks-->
         <scene sceneID="LXv-26-lR9">
             <objects>
                 <tableViewController id="8s2-GR-qEE" customClass="MainViewTableViewController" customModule="SimpleTasks2" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="kEt-so-JL6">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" springLoaded="YES" id="kEt-so-JL6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -48,7 +48,7 @@
                             <outlet property="delegate" destination="8s2-GR-qEE" id="jCH-3R-7YA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="My todos" largeTitleDisplayMode="always" id="GT0-Fo-P0d"/>
+                    <navigationItem key="navigationItem" title="Tasks" largeTitleDisplayMode="always" id="GT0-Fo-P0d"/>
                     <connections>
                         <outlet property="addButtonItem" destination="SeZ-eq-BuY" id="SSg-10-vAF"/>
                         <outlet property="navBar" destination="GT0-Fo-P0d" id="Q2b-7Q-sop"/>
@@ -67,7 +67,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="New task" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oud-E2-yHc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="New task" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="oud-E2-yHc">
                                 <rect key="frame" x="16" y="87" width="288" height="46"/>
                                 <color key="tintColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>

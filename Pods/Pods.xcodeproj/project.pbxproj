@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -40,11 +40,11 @@
 		1DF688E57E6E302AD7ED7D520522790D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		235CC5C9391145C25A7F599B31D28D54 /* Pods-SimpleTasks2Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleTasks2Tests-umbrella.h"; sourceTree = "<group>"; };
 		2BAEE72DF9B506ACA85C1DB092BB9B34 /* Pods-SimpleTasks2-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleTasks2-dummy.m"; sourceTree = "<group>"; };
-		2BF05042A14FF5EBFD068369ED4E536E /* Pods_SimpleTasks2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleTasks2.framework; path = "Pods-SimpleTasks2.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BF05042A14FF5EBFD068369ED4E536E /* Pods_SimpleTasks2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTasks2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B373F21BA590B8EEF03B482A0AC3214 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42C7F8FC5E0DA3D83CD154BFDBDB447F /* Pods-SimpleTasks2UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTasks2UITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4CA29AFA3A9AC34BDECD4E6355140903 /* Pods-SimpleTasks2Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTasks2Tests-frameworks.sh"; sourceTree = "<group>"; };
-		520CD171D2390B9C9592F9F4EC020A25 /* Pods_SimpleTasks2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleTasks2Tests.framework; path = "Pods-SimpleTasks2Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		520CD171D2390B9C9592F9F4EC020A25 /* Pods_SimpleTasks2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTasks2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5537136E28FBF0B3933DC024D69FCA5D /* Pods-SimpleTasks2-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleTasks2-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5A16F4CFC63FAC439D7A04994F579A03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		5AB2B45F47B336B70D5A0FC952A3CBFE /* Pods-SimpleTasks2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTasks2.release.xcconfig"; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		7640B58A6546BCA24C99B07F9C2925A7 /* Pods-SimpleTasks2UITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleTasks2UITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		8739783C1E857B2BA86683BAE62D4F00 /* Pods-SimpleTasks2Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleTasks2Tests.modulemap"; sourceTree = "<group>"; };
 		8CC0A8653061F33987DB54888099C996 /* Pods-SimpleTasks2UITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTasks2UITests-frameworks.sh"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C0AA17C9B281932211C756C48C72E6C /* Pods-SimpleTasks2Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleTasks2Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		9D141D7753C208A1FE99B12B9F241C12 /* Pods-SimpleTasks2-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleTasks2-umbrella.h"; sourceTree = "<group>"; };
 		A530BDAF1175C12FB6B5117650A0AD90 /* Pods-SimpleTasks2-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTasks2-resources.sh"; sourceTree = "<group>"; };
@@ -66,7 +66,7 @@
 		C2D63C0C5E295CAF99049FD00B47E223 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA4C7F3FC80FC783DD00ECE89BBC5C14 /* Pods-SimpleTasks2Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleTasks2Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		CB2712FDB0E62335D8E2B1F369923ACF /* Pods-SimpleTasks2-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleTasks2-frameworks.sh"; sourceTree = "<group>"; };
-		D3AE3D083AD7ABAD1701CBE55373A1D8 /* Pods_SimpleTasks2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_SimpleTasks2UITests.framework; path = "Pods-SimpleTasks2UITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3AE3D083AD7ABAD1701CBE55373A1D8 /* Pods_SimpleTasks2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTasks2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50AB920B701EF6FF1599C35CEAAB3CE /* Pods-SimpleTasks2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTasks2Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		F0CBE615E6E6541CB3E5E8F5A9852D00 /* Pods-SimpleTasks2-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleTasks2-acknowledgements.plist"; sourceTree = "<group>"; };
 		F9D9AF5839F6A2EC01883C33DD3D0CCC /* Pods-SimpleTasks2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleTasks2Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -298,6 +298,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
@@ -373,11 +374,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SimpleTasks2/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2.modulemap";
 				OTHER_LDFLAGS = "";
@@ -412,11 +409,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SimpleTasks2/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2.modulemap";
 				OTHER_LDFLAGS = "";
@@ -450,11 +443,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SimpleTasks2UITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTasks2UITests/Pods-SimpleTasks2UITests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -489,11 +478,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SimpleTasks2Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTasks2Tests/Pods-SimpleTasks2Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -527,11 +512,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SimpleTasks2Tests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTasks2Tests/Pods-SimpleTasks2Tests.modulemap";
 				OTHER_LDFLAGS = "";
@@ -566,11 +547,7 @@
 				INFOPLIST_FILE = "Target Support Files/Pods-SimpleTasks2UITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "Target Support Files/Pods-SimpleTasks2UITests/Pods-SimpleTasks2UITests.modulemap";
 				OTHER_LDFLAGS = "";
