@@ -1,0 +1,6 @@
+framework module Pods_SimpleTasks2 {
+  umbrella header "Pods-SimpleTasks2-umbrella.h"
+
+  export *
+  module * { export * }
+}
