@@ -12,28 +12,22 @@ import CoreData
 
 class AddTaskViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var addButton: UIButton!
+    @IBOutlet weak var addButton: UIButton! //кнопка Done
     
-    var mainVC = MainViewTableViewController()
+    var mainVC = MainViewTableViewController() //Главный вью (список задач)
     
-    func saveDarkMode(tasks:Bool) {
-        UserDefaults.standard.set(Public.tasks, forKey: "darkModeCode")
-        print("Dark Mode:", Public.darkMode)
-    }
-    func loadDarkMode() -> Bool{
-        return UserDefaults.standard.bool(forKey:"darkModeCode")
-    }
+   
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!//ТекстФилд для имени задачи
     
     
    
-    let darkModeColor = UIColor(red:0.12, green:0.13, blue:0.14, alpha:1.0)
+    let darkModeColor = UIColor(red:0.12, green:0.13, blue:0.14, alpha:1.0)//Темный цвет
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        if UIScreen.main.brightness < CGFloat(0.3) {
+        if UIScreen.main.brightness < CGFloat(0.3) {//Настройка темной темы
             view.backgroundColor = darkModeColor
             addButton.tintColor = .white
             nameTextField.textColor = .white
@@ -41,57 +35,40 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
             
         }
         self.nameTextField.delegate = self
-        nameTextField.becomeFirstResponder()
-        addButton.layer.cornerRadius = 6
+        nameTextField.becomeFirstResponder()//Включение клавиатуры при входе
+        addButton.layer.cornerRadius = 6 //красивы углы у кнопки
        
-       
-        // Do any additional setup after loading the view.
-        
-       
-        
-        
-        
+    
     }
     
-    @IBAction func returnButtonTapped(_ sender: Any) {
+    @IBAction func returnButtonTapped(_ sender: Any) {//Добавление задачи по кнопке с клавиатуры
         addTaskAction()
     }
     
     
-   @IBAction func addAction(_ sender: Any) {
+   @IBAction func addAction(_ sender: Any) { //добавление по обычной Done
         addTaskAction()
     
     }
     
-    func addTaskAction() {
+    func addTaskAction() { //Добаление заадчи
         if nameTextField.text != nil {
-            //newTaskPublic.name = nameTextField.text!
             Public.newTaskPublic = nameTextField.text!
-            Public.updated = true
-        } else {
             
-        }
+        } else {print("Error!")}
         if nameTextField.text == ""{
             Public.newTaskPublic = "New tasks"
         }
         
-        Public.tasks.append(Public.newTaskPublic)
-        mainVC.tableView.reloadData()
+        Public.tasks.append(Public.newTaskPublic) //добавление в массив
+        mainVC.tableView.reloadData() //Обновление TableView
         
         
-        //mainVC.defaults.set(mainVC.tasks, forKey: "TasksSaved")
-        
-        
-        
-        
-        dismissAction()
+        dismissAction() //закрытие экрана
     }
     
     @objc func dismissAction() {
         self.dismiss(animated: true)
-       
-       
-
     }
     
     /*
