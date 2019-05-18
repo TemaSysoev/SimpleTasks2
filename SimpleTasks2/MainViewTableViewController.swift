@@ -14,9 +14,16 @@ import CoreData
 struct Public {
     static var tasks: [String] = [] //Массив задач
     static var newTaskPublic = String() //Новая задача
-    
+    static var doneTasksCouner = 0
 }
 
+struct System {
+    static func clearNavigationBar(forBar navBar: UINavigationBar) {
+        navBar.setBackgroundImage(UIImage(), for: .default)
+        navBar.shadowImage = UIImage()
+        navBar.isTranslucent = true
+    }
+}
 
 
 class MainViewTableViewController: UITableViewController {
@@ -26,6 +33,9 @@ class MainViewTableViewController: UITableViewController {
     @IBOutlet weak var toolBar: UIToolbar! //Тулбар с кнопкой добавления задачи
     @IBOutlet weak var navBar: UINavigationItem! //Заголовок
     @IBOutlet weak var addButtonItem: UIBarButtonItem! //Кнопка +
+    @IBOutlet weak var sortButton: UIBarButtonItem!
+    
+
     
     let darkModeSwitchBrightness = CGFloat(0.3)
     let userDefults = UserDefaults.standard
@@ -40,12 +50,29 @@ class MainViewTableViewController: UITableViewController {
         
     }
     
+    func saveDoneCounter(tasks:Int) {
+        UserDefaults.standard.set(Public.doneTasksCouner, forKey: "tasksCounter")
+    }
+    func loadDoneCounter() -> Int {
+        if UserDefaults.standard.integer(forKey:"tasksCounter") != nil {
+            return UserDefaults.standard.integer(forKey:"tasksCounter")
+        } else {return 0}
+        
+    }
+    
     
     
     @IBAction func showAddTask(_ sender: Any) {
         self.saveTasks(tasks: Public.tasks) //Сохраниние при добавлении новой задачи
     }
         
+    @IBAction func sortTasks(_ sender: Any) {
+        Public.tasks.sort(by: >)
+        self.tableView.reloadData()
+        self.saveTasks(tasks: Public.tasks)
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +80,12 @@ class MainViewTableViewController: UITableViewController {
         self.navigationController?.navigationBar.prefersLargeTitles = true //большой красивый заголовк
         navigationItem.hidesBackButton = true //Отключение кнопки Назад
         
+        if let navController = navigationController {
+            System.clearNavigationBar(forBar: navController.navigationBar)
+            navController.view.backgroundColor = .clear
+        }
         
-        self.navigationController!.navigationBar.isTranslucent = false //Отключение backround для Заголовка
+       //self.navigationController!.navigationBar.isTranslucent = false //Отключение backround для Заголовка
         
          if UIScreen.main.brightness < darkModeSwitchBrightness { //Настройка темной темы
             self.navigationController!.navigationBar.tintColor = darkModeColor
@@ -68,9 +99,10 @@ class MainViewTableViewController: UITableViewController {
             toolBar.barTintColor = darkModeColor
         }
         toolBar.clipsToBounds = true //Привязка тулбара
-        
+       
         
         Public.tasks = loadTasks() as! [String] //Загрузка списка задач
+        Public.doneTasksCouner = loadDoneCounter()
         if Public.tasks.isEmpty == true{ //Наполнение списка, если он пуст ПОПРАВИТЬ
             let simple1 = "Swipe left to Done"
             let simple2 = "Swipe right to Prioritize task"
@@ -162,7 +194,28 @@ class MainViewTableViewController: UITableViewController {
             let movingElement = Public.tasks.remove(at: indexPath.row)
             let index = IndexPath(row: 0, section: 0) //Первая позиция
             Public.tasks.insert(movingElement, at: 0)
-            Public.tasks[0] = "❕" + Public.tasks[0] //Добавление ! в название
+            var task = Array(Public.tasks[0])
+           
+            if task[1] == "!" {
+                
+                if (task[0] == "9"){
+                    task[0] = "0"
+                } else{
+                    if task[0] == "0" {
+                    } else {
+                        let x = String(task[0])
+                        print(x)
+                        let xInt = Int(x)! + 1
+                        task[0] = Character("\(xInt)")
+                        
+                    }
+                }
+                Public.tasks[0] = String(task)
+            }else {
+                
+                Public.tasks[0] = "1! " + Public.tasks[0] //Добавление ! в название
+                
+            }
             self.tableView.reloadData()
             
             self.tableView.cellForRow(at: index)?.textLabel!.font = UIFont.boldSystemFont(ofSize: 18.0) //Изменение шрифта задачи
@@ -179,7 +232,8 @@ class MainViewTableViewController: UITableViewController {
             Public.tasks.remove(at: indexPath.row)
            
             self.tableView.reloadData()
-            
+            Public.doneTasksCouner += 1
+            self.saveDoneCounter(tasks: Public.doneTasksCouner)
             self.saveTasks(tasks: Public.tasks)
         }
         action.backgroundColor = UIColor(red:0.30, green:0.30, blue:0.30, alpha:1.0)//Задание цвета свайпа

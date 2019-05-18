@@ -53,11 +53,11 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     
     func addTaskAction() { //Добаление заадчи
         if nameTextField.text != nil {
-            Public.newTaskPublic = nameTextField.text!
+            Public.newTaskPublic = "1! " + nameTextField.text!
             
         } else {print("Error!")}
         if nameTextField.text == ""{
-            Public.newTaskPublic = "New tasks"
+            Public.newTaskPublic = "1! New tasks"
         }
         
         Public.tasks.append(Public.newTaskPublic) //добавление в массив

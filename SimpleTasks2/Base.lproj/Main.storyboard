@@ -10,6 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="eYq-PS-Rku">
+            <objects>
+                <viewController id="SPM-UJ-xI2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kUj-FO-NPt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="hmI-O2-Ch7"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ncp-Is-8LR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1038" y="-622"/>
+        </scene>
         <!--Tasks-->
         <scene sceneID="LXv-26-lR9">
             <objects>
@@ -30,7 +45,14 @@
                                     </connections>
                                 </barButtonItem>
                                 <barButtonItem systemItem="flexibleSpace" id="hTD-RS-9fF"/>
+                                <barButtonItem title="↓" id="37v-7U-nMT">
+                                    <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="sortTasks:" destination="8s2-GR-qEE" id="YJo-Va-VJ9"/>
+                                    </connections>
+                                </barButtonItem>
                             </items>
+                            <color key="tintColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="K6K-8Z-bkZ">
@@ -53,6 +75,7 @@
                     <connections>
                         <outlet property="addButtonItem" destination="SeZ-eq-BuY" id="SSg-10-vAF"/>
                         <outlet property="navBar" destination="GT0-Fo-P0d" id="Q2b-7Q-sop"/>
+                        <outlet property="sortButton" destination="37v-7U-nMT" id="wwy-zd-O5R"/>
                         <outlet property="toolBar" destination="fce-3i-W8k" id="0pb-P9-2gH"/>
                     </connections>
                 </tableViewController>

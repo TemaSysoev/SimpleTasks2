@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		4F14E58D1FFE3D26E0AA9386 /* Pods_SimpleTasks2UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFB77F58B4F2246CDD2FA827 /* Pods_SimpleTasks2UITests.framework */; };
 		98E8A7642D5CF20C3EC5BB5C /* Pods_SimpleTasks2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55A63EEFCC4316507926FB68 /* Pods_SimpleTasks2.framework */; };
-		E01983A7227B6C51007614C1 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = E01983A6227B6C50007614C1 /* AppIcon.appiconset */; };
-		E01983A9227B6CCE007614C1 /* Без заголовка.png in Resources */ = {isa = PBXBuildFile; fileRef = E01983A8227B6CCE007614C1 /* Без заголовка.png */; };
 		E06860962278896200AACAC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860952278896200AACAC6 /* AppDelegate.swift */; };
 		E068609B2278896200AACAC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06860992278896200AACAC6 /* Main.storyboard */; };
 		E068609E2278896200AACAC6 /* SimpleTasks2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E068609C2278896200AACAC6 /* SimpleTasks2.xcdatamodeld */; };
@@ -21,6 +19,7 @@
 		E06860C722788ACE00AACAC6 /* MainViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860C622788ACE00AACAC6 /* MainViewTableViewController.swift */; };
 		E06860C922788CCD00AACAC6 /* Todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860C822788CCD00AACAC6 /* Todolist.swift */; };
 		E06860CB2278900E00AACAC6 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */; };
+		E081261222909345007A6B72 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = E081261122909345007A6B72 /* AppIcon.appiconset */; };
 		FED76862F048589923BC98DC /* Pods_SimpleTasks2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D6B676F819CDBFC314A6CC /* Pods_SimpleTasks2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,8 +49,6 @@
 		56D78A4CE8288D4A32638E70 /* Pods-SimpleTasks2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTasks2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTasks2Tests/Pods-SimpleTasks2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A0D6B676F819CDBFC314A6CC /* Pods_SimpleTasks2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTasks2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A598B9A2B70B05BD75DB14B1 /* Pods-SimpleTasks2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTasks2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2.debug.xcconfig"; sourceTree = "<group>"; };
-		E01983A6227B6C50007614C1 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = iOS/AppIcon.appiconset; sourceTree = SOURCE_ROOT; };
-		E01983A8227B6CCE007614C1 /* Без заголовка.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Без заголовка.png"; path = "iOS/Без заголовка.png"; sourceTree = SOURCE_ROOT; };
 		E06860922278896200AACAC6 /* SimpleTasks2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTasks2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06860952278896200AACAC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E068609A2278896200AACAC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,6 +65,7 @@
 		E06860C622788ACE00AACAC6 /* MainViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewController.swift; sourceTree = "<group>"; };
 		E06860C822788CCD00AACAC6 /* Todolist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todolist.swift; sourceTree = "<group>"; };
 		E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		E081261122909345007A6B72 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = iOS/AppIcon.appiconset; sourceTree = SOURCE_ROOT; };
 		E0EAE61D227D874A00AFD1B3 /* SimpleTasks2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleTasks2.entitlements; sourceTree = "<group>"; };
 		E0EAE61E227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0EAE61F227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -157,8 +155,7 @@
 				E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */,
 				E06860992278896200AACAC6 /* Main.storyboard */,
 				E068609F2278896700AACAC6 /* Assets.xcassets */,
-				E01983A8227B6CCE007614C1 /* Без заголовка.png */,
-				E01983A6227B6C50007614C1 /* AppIcon.appiconset */,
+				E081261122909345007A6B72 /* AppIcon.appiconset */,
 				E06860A12278896700AACAC6 /* LaunchScreen.storyboard */,
 				E06860A42278896700AACAC6 /* Info.plist */,
 				E068609C2278896200AACAC6 /* SimpleTasks2.xcdatamodeld */,
@@ -300,9 +297,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E01983A7227B6C51007614C1 /* AppIcon.appiconset in Resources */,
+				E081261222909345007A6B72 /* AppIcon.appiconset in Resources */,
 				E06860A32278896700AACAC6 /* LaunchScreen.storyboard in Resources */,
-				E01983A9227B6CCE007614C1 /* Без заголовка.png in Resources */,
 				E06860A02278896700AACAC6 /* Assets.xcassets in Resources */,
 				E068609B2278896200AACAC6 /* Main.storyboard in Resources */,
 			);
@@ -581,7 +577,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "t-software.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -601,7 +597,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "t-software.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

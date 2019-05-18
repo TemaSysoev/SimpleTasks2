@@ -10,6 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="9Hi-Iz-6Uh">
+            <objects>
+                <viewController id="ON1-1C-DXR" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tgq-4E-Gnc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="oPR-Z6-3lw"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vOK-gR-mva" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1137" y="-728"/>
+        </scene>
         <!--Задачи-->
         <scene sceneID="LXv-26-lR9">
             <objects>
@@ -26,6 +41,13 @@
                                     <color key="tintColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                     <connections>
                                         <segue destination="8BF-ft-l7v" kind="presentation" id="qSr-Gj-elR"/>
+                                    </connections>
+                                </barButtonItem>
+                                <barButtonItem style="plain" systemItem="flexibleSpace" id="1b6-Qu-4wV"/>
+                                <barButtonItem title="↓" id="K4s-UT-FgS">
+                                    <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <action selector="sortTasks:" destination="8s2-GR-qEE" id="4DH-4f-2M2"/>
                                     </connections>
                                 </barButtonItem>
                             </items>
@@ -51,6 +73,7 @@
                     <connections>
                         <outlet property="addButtonItem" destination="SeZ-eq-BuY" id="SSg-10-vAF"/>
                         <outlet property="navBar" destination="GT0-Fo-P0d" id="Q2b-7Q-sop"/>
+                        <outlet property="sortButton" destination="K4s-UT-FgS" id="ZZD-FY-JT8"/>
                         <outlet property="toolBar" destination="fce-3i-W8k" id="0pb-P9-2gH"/>
                     </connections>
                 </tableViewController>
