@@ -98,6 +98,7 @@ class MainViewTableViewController: UITableViewController {
             self.tableView.tintColor = darkModeColor
             tableView.separatorColor = darkModeColor
             addButtonItem.tintColor = .white
+            sortButton.tintColor = .white
             toolBar.barTintColor = darkModeColor
         }
         toolBar.clipsToBounds = true //Привязка тулбара

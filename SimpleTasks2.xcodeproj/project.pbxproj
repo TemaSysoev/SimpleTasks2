@@ -20,6 +20,7 @@
 		E06860C922788CCD00AACAC6 /* Todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860C822788CCD00AACAC6 /* Todolist.swift */; };
 		E06860CB2278900E00AACAC6 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */; };
 		E081261222909345007A6B72 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = E081261122909345007A6B72 /* AppIcon.appiconset */; };
+		E0A4261E2295D0AA001AB015 /* SortSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A4261D2295D0A9001AB015 /* SortSmall.png */; };
 		FED76862F048589923BC98DC /* Pods_SimpleTasks2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D6B676F819CDBFC314A6CC /* Pods_SimpleTasks2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +67,7 @@
 		E06860C822788CCD00AACAC6 /* Todolist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todolist.swift; sourceTree = "<group>"; };
 		E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		E081261122909345007A6B72 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = iOS/AppIcon.appiconset; sourceTree = SOURCE_ROOT; };
+		E0A4261D2295D0A9001AB015 /* SortSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SortSmall.png; sourceTree = SOURCE_ROOT; };
 		E0EAE61D227D874A00AFD1B3 /* SimpleTasks2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleTasks2.entitlements; sourceTree = "<group>"; };
 		E0EAE61E227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0EAE61F227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */,
 				E06860992278896200AACAC6 /* Main.storyboard */,
 				E068609F2278896700AACAC6 /* Assets.xcassets */,
+				E0A4261D2295D0A9001AB015 /* SortSmall.png */,
 				E081261122909345007A6B72 /* AppIcon.appiconset */,
 				E06860A12278896700AACAC6 /* LaunchScreen.storyboard */,
 				E06860A42278896700AACAC6 /* Info.plist */,
@@ -299,6 +302,7 @@
 			files = (
 				E081261222909345007A6B72 /* AppIcon.appiconset in Resources */,
 				E06860A32278896700AACAC6 /* LaunchScreen.storyboard in Resources */,
+				E0A4261E2295D0AA001AB015 /* SortSmall.png in Resources */,
 				E06860A02278896700AACAC6 /* Assets.xcassets in Resources */,
 				E068609B2278896200AACAC6 /* Main.storyboard in Resources */,
 			);

@@ -27,7 +27,7 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         
-        if UIScreen.main.brightness < CGFloat(0.3) {//Настройка темной темы
+      if UIScreen.main.brightness < CGFloat(0.3) {//Настройка темной темы
             view.backgroundColor = darkModeColor
             addButton.tintColor = .white
             nameTextField.textColor = .white
@@ -50,6 +50,9 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         addTaskAction()
     
     }
+    
+    
+    
     
     func addTaskAction() { //Добаление заадчи
         if nameTextField.text != nil {

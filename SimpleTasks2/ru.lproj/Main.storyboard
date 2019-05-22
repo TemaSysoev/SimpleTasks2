@@ -48,7 +48,7 @@
                                     <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </barButtonItem>
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="1b6-Qu-4wV"/>
-                                <barButtonItem title="↓" id="K4s-UT-FgS">
+                                <barButtonItem title="☰" id="K4s-UT-FgS">
                                     <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="sortTasks:" destination="8s2-GR-qEE" id="4DH-4f-2M2"/>
@@ -95,6 +95,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="fill" placeholder="Новая задача" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oud-E2-yHc">
                                 <rect key="frame" x="16" y="87" width="288" height="46"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="46" id="XVQ-wo-KKc"/>
                                 </constraints>
@@ -114,81 +115,6 @@
                                 <state key="normal" title="Готово"/>
                                 <connections>
                                     <action selector="addAction:" destination="8BF-ft-l7v" eventType="touchUpInside" id="Lkn-fF-E1i"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6GY-FS-ffz">
-                                <rect key="frame" x="16" y="141" width="55" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="LlW-Yj-QHC"/>
-                                    <constraint firstAttribute="height" constant="29" id="pTt-L4-4GB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Купить">
-                                    <color key="titleColor" red="0.12352972477674484" green="0.12862658500671387" blue="0.13849115371704102" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addAction:" destination="8BF-ft-l7v" eventType="touchUpInside" id="LxM-2D-SN0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfY-8d-d5D">
-                                <rect key="frame" x="79" y="141" width="68" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="5pY-ZS-kBg"/>
-                                    <constraint firstAttribute="width" constant="65" id="gEf-Nk-lEq"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Сделать">
-                                    <color key="titleColor" red="0.1235297248" green="0.12862658499999999" blue="0.13849115370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addAction:" destination="8BF-ft-l7v" eventType="touchUpInside" id="vui-Lc-T1K"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYb-Jr-FW8">
-                                <rect key="frame" x="16" y="174" width="85" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="29" id="CmM-07-zzy"/>
-                                    <constraint firstAttribute="width" constant="65" id="PeM-dv-5jn"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Отправить">
-                                    <color key="titleColor" red="0.1235297248" green="0.12862658499999999" blue="0.13849115370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addAction:" destination="8BF-ft-l7v" eventType="touchUpInside" id="LUv-SE-59S"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oh-mT-Z59">
-                                <rect key="frame" x="101" y="174" width="90" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="e7S-MB-v4e"/>
-                                    <constraint firstAttribute="height" constant="29" id="nRG-FE-jMc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Прочитать">
-                                    <color key="titleColor" red="0.1235297248" green="0.12862658499999999" blue="0.13849115370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addAction:" destination="8BF-ft-l7v" eventType="touchUpInside" id="SZb-Ma-mxq"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCZ-Fy-I0m">
-                                <rect key="frame" x="155" y="141" width="90" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="65" id="R54-0k-nHq"/>
-                                    <constraint firstAttribute="height" constant="29" id="x8W-R4-tqg"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Позвонить">
-                                    <color key="titleColor" red="0.1235297248" green="0.12862658499999999" blue="0.13849115370000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addAction:" destination="8BF-ft-l7v" eventType="touchUpInside" id="EYh-I9-DCO"/>
                                 </connections>
                             </button>
                         </subviews>

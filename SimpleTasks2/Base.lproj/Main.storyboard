@@ -47,7 +47,7 @@
                                 <barButtonItem style="plain" systemItem="flexibleSpace" id="pbR-AI-0UD"/>
                                 <barButtonItem title="Total:" id="TcH-u5-GQG"/>
                                 <barButtonItem systemItem="flexibleSpace" id="hTD-RS-9fF"/>
-                                <barButtonItem title="↓" id="37v-7U-nMT">
+                                <barButtonItem title="☰" id="37v-7U-nMT">
                                     <color key="tintColor" red="0.1215686275" green="0.12941176469999999" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <connections>
                                         <action selector="sortTasks:" destination="8s2-GR-qEE" id="YJo-Va-VJ9"/>
