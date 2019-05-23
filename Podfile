@@ -6,7 +6,7 @@ target 'SimpleTasks2' do
   use_frameworks!
 
   # Pods for SimpleTasks2
-
+pod 'RealmSwift'
 
   target 'SimpleTasks2Tests' do
     inherit! :search_paths

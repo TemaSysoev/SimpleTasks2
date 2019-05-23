@@ -20,7 +20,6 @@
 		E06860C922788CCD00AACAC6 /* Todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860C822788CCD00AACAC6 /* Todolist.swift */; };
 		E06860CB2278900E00AACAC6 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */; };
 		E081261222909345007A6B72 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = E081261122909345007A6B72 /* AppIcon.appiconset */; };
-		E0A4261E2295D0AA001AB015 /* SortSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = E0A4261D2295D0A9001AB015 /* SortSmall.png */; };
 		FED76862F048589923BC98DC /* Pods_SimpleTasks2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D6B676F819CDBFC314A6CC /* Pods_SimpleTasks2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +49,7 @@
 		56D78A4CE8288D4A32638E70 /* Pods-SimpleTasks2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTasks2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTasks2Tests/Pods-SimpleTasks2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A0D6B676F819CDBFC314A6CC /* Pods_SimpleTasks2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTasks2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A598B9A2B70B05BD75DB14B1 /* Pods-SimpleTasks2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleTasks2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2.debug.xcconfig"; sourceTree = "<group>"; };
+		E008E4B3229717F60086FC4E /* Dela.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Dela.entitlements; sourceTree = "<group>"; };
 		E06860922278896200AACAC6 /* SimpleTasks2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTasks2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E06860952278896200AACAC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E068609A2278896200AACAC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -67,7 +67,6 @@
 		E06860C822788CCD00AACAC6 /* Todolist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todolist.swift; sourceTree = "<group>"; };
 		E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		E081261122909345007A6B72 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = iOS/AppIcon.appiconset; sourceTree = SOURCE_ROOT; };
-		E0A4261D2295D0A9001AB015 /* SortSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SortSmall.png; sourceTree = SOURCE_ROOT; };
 		E0EAE61D227D874A00AFD1B3 /* SimpleTasks2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleTasks2.entitlements; sourceTree = "<group>"; };
 		E0EAE61E227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0EAE61F227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -128,6 +127,7 @@
 		E06860892278896200AACAC6 = {
 			isa = PBXGroup;
 			children = (
+				E008E4B3229717F60086FC4E /* Dela.entitlements */,
 				E06860942278896200AACAC6 /* SimpleTasks2 */,
 				E06860AC2278896700AACAC6 /* SimpleTasks2Tests */,
 				E06860B72278896700AACAC6 /* SimpleTasks2UITests */,
@@ -157,7 +157,6 @@
 				E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */,
 				E06860992278896200AACAC6 /* Main.storyboard */,
 				E068609F2278896700AACAC6 /* Assets.xcassets */,
-				E0A4261D2295D0A9001AB015 /* SortSmall.png */,
 				E081261122909345007A6B72 /* AppIcon.appiconset */,
 				E06860A12278896700AACAC6 /* LaunchScreen.storyboard */,
 				E06860A42278896700AACAC6 /* Info.plist */,
@@ -195,6 +194,7 @@
 				E068608E2278896200AACAC6 /* Sources */,
 				E068608F2278896200AACAC6 /* Frameworks */,
 				E06860902278896200AACAC6 /* Resources */,
+				ACFCD121C357E570BAA033FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -262,6 +262,9 @@
 							com.apple.Siri = {
 								enabled = 0;
 							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
 						};
 					};
 					E06860A82278896700AACAC6 = {
@@ -302,7 +305,6 @@
 			files = (
 				E081261222909345007A6B72 /* AppIcon.appiconset in Resources */,
 				E06860A32278896700AACAC6 /* LaunchScreen.storyboard in Resources */,
-				E0A4261E2295D0AA001AB015 /* SortSmall.png in Resources */,
 				E06860A02278896700AACAC6 /* Assets.xcassets in Resources */,
 				E068609B2278896200AACAC6 /* Main.storyboard in Resources */,
 			);
@@ -377,6 +379,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACFCD121C357E570BAA033FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -570,6 +592,7 @@
 			baseConfigurationReference = A598B9A2B70B05BD75DB14B1 /* Pods-SimpleTasks2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dela.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K52EJNPD2V;
 				INFOPLIST_FILE = SimpleTasks2/Info.plist;
@@ -581,7 +604,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "t-software.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -590,6 +613,7 @@
 			baseConfigurationReference = 2DE3CC159B74058012CA3131 /* Pods-SimpleTasks2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Dela.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K52EJNPD2V;
 				INFOPLIST_FILE = SimpleTasks2/Info.plist;
@@ -601,7 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "t-software.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

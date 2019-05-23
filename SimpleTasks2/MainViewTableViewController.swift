@@ -10,7 +10,6 @@ import UIKit
 import UserNotifications
 import CoreData
 
-
 struct Public {
     static var tasks: [String] = [] //Массив задач
     static var newTaskPublic = String() //Новая задача
@@ -203,15 +202,16 @@ class MainViewTableViewController: UITableViewController {
             var task = Array(Public.tasks[0])
            
             
-           
-                if task[0] == "¹" {
-                }
-                if task[0] == "²" {
-                    task[0] = "¹"
-                }
-                if task[0] == "³" {
-                    task[0] = "²"
-                }
+            if task[0] == "⁰" {
+              
+            }
+            if task[0] == "¹" {
+                task[0] = "⁰"
+            }
+            if task[0] == "²" {
+                task[0] = "¹"
+            }
+            
                 
                
                 

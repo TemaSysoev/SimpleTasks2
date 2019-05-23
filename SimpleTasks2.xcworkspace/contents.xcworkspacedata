@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:SimpleTasks2.xcodeproj">
+      location = "group:/Users/temasysoev/Documents/SimpleTasks2/SimpleTasks2.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:SimpleTasks2.xcodeproj">
    </FileRef>
 </Workspace>
