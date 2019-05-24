@@ -18,7 +18,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        MKiCloudSync.start(withPrefix: "tasks")
+        //MKiCloudSync.start(withPrefix: "tasks")
+        NSUbiquitousKeyValueStore.default.synchronize()
         return true
     }
 

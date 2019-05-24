@@ -93,32 +93,35 @@ class MainViewTableViewController: UITableViewController {
     @IBOutlet weak var sortButton: UIBarButtonItem!
     @IBOutlet weak var totalTasks: UIBarButtonItem!
     
+    
 
     
     let darkModeSwitchBrightness = CGFloat(0.3)
     let userDefults = UserDefaults.standard
     let darkModeColor = UIColor(red:0.12, green:0.13, blue:0.14, alpha:1.0) //Цвет backround для Темной темы
     func saveTasks(tasks:Array<Any>) { //Сохранение массива задач
-        UserDefaults.standard.set(Public.tasks, forKey: "tasksKey")
-         MKiCloudSync.start(withPrefix: "tasks")
+        //UserDefaults.standard.set(Public.tasks, forKey: "tasksKey")
+        NSUbiquitousKeyValueStore.default.set(Public.tasks, forKey: "tasksKey")
+         //MKiCloudSync.start(withPrefix: "tasks")
     }
     func loadTasks() -> Array<Any>{ //Чтение массива задач
-        if UserDefaults.standard.array(forKey:"tasksKey") != nil {
-            MKiCloudSync.start(withPrefix: "tasks")
-            return UserDefaults.standard.array(forKey:"tasksKey")!
+        if NSUbiquitousKeyValueStore.default.array(forKey: "tasksKey") != nil {
+            //MKiCloudSync.start(withPrefix: "tasks")
+            //return UserDefaults.standard.array(forKey:"tasksKey")!
+            return NSUbiquitousKeyValueStore.default.array(forKey: "tasksKey")!
         } else {return ["Hello"]}
         
     }
     
     func saveDoneCounter(tasks:Int) {
         
-        UserDefaults.standard.set(Public.doneTasksCouner, forKey: "tasksCounter")
-        MKiCloudSync.start(withPrefix: "tasks")
+        NSUbiquitousKeyValueStore.default.set(Public.doneTasksCouner, forKey: "tasksCounter")
+        //MKiCloudSync.start(withPrefix: "tasks")
     }
     func loadDoneCounter() -> Int {
-        if UserDefaults.standard.integer(forKey:"tasksCounter") != nil {
-             MKiCloudSync.start(withPrefix: "tasks")
-            return UserDefaults.standard.integer(forKey:"tasksCounter")
+        if NSUbiquitousKeyValueStore.default.double(forKey: "tasksCounter")  != nil {
+             //MKiCloudSync.start(withPrefix: "tasks")
+            return Int(NSUbiquitousKeyValueStore.default.double(forKey: "tasksCounter"))
         } else {return 0}
         
     }
@@ -126,14 +129,18 @@ class MainViewTableViewController: UITableViewController {
     
     
     @IBAction func showAddTask(_ sender: Any) {
+       
         self.saveTasks(tasks: Public.tasks) //Сохраниние при добавлении новой задачи
+         NSUbiquitousKeyValueStore.default.synchronize()
          self.totalTasks.title = ""
     }
         
     @IBAction func sortTasks(_ sender: Any) {
+       
         Public.tasks.sort(by: >)
         self.tableView.reloadData()
         self.saveTasks(tasks: Public.tasks)
+         NSUbiquitousKeyValueStore.default.synchronize()
          self.totalTasks.title = ""
     }
     
@@ -144,7 +151,7 @@ class MainViewTableViewController: UITableViewController {
         
         self.navigationController?.navigationBar.prefersLargeTitles = true //большой красивый заголовк
         navigationItem.hidesBackButton = true //Отключение кнопки Назад
-        
+        NSUbiquitousKeyValueStore.default.synchronize()
         if let navController = navigationController {
             System.clearNavigationBar(forBar: navController.navigationBar)
             navController.view.backgroundColor = .clear
@@ -258,7 +265,7 @@ class MainViewTableViewController: UITableViewController {
 
     func pushUpAction(at indexPath: IndexPath) -> UIContextualAction {
         let action = UIContextualAction(style: .normal, title: "↑"){_,_,_ in
-            
+            NSUbiquitousKeyValueStore.default.synchronize()
             let movingElement = Public.tasks.remove(at: indexPath.row)
             let index = IndexPath(row: 0, section: 0) //Первая позиция
             Public.tasks.insert(movingElement, at: 0)
@@ -319,7 +326,7 @@ class MainViewTableViewController: UITableViewController {
         let action = UIContextualAction(style: .normal, title: "✓"){_,_,_ in
            
             Public.tasks.remove(at: indexPath.row)
-           
+           NSUbiquitousKeyValueStore.default.synchronize()
             self.tableView.reloadData()
             Public.doneTasksCouner += 1
             self.totalTasks.title = "\(Public.doneTasksCouner)"
