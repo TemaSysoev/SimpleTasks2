@@ -19,7 +19,8 @@
 		E06860C722788ACE00AACAC6 /* MainViewTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860C622788ACE00AACAC6 /* MainViewTableViewController.swift */; };
 		E06860C922788CCD00AACAC6 /* Todolist.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860C822788CCD00AACAC6 /* Todolist.swift */; };
 		E06860CB2278900E00AACAC6 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */; };
-		E081261222909345007A6B72 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = E081261122909345007A6B72 /* AppIcon.appiconset */; };
+		E0B213C92297298A006D9EDC /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = E0B213C82297298A006D9EDC /* AppIcon.appiconset */; };
+		E0BE250022985B8A00AF9468 /* MKiCloudSync.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BE24FF22985B8A00AF9468 /* MKiCloudSync.m */; };
 		FED76862F048589923BC98DC /* Pods_SimpleTasks2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0D6B676F819CDBFC314A6CC /* Pods_SimpleTasks2Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +67,10 @@
 		E06860C622788ACE00AACAC6 /* MainViewTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewTableViewController.swift; sourceTree = "<group>"; };
 		E06860C822788CCD00AACAC6 /* Todolist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Todolist.swift; sourceTree = "<group>"; };
 		E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		E081261122909345007A6B72 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = iOS/AppIcon.appiconset; sourceTree = SOURCE_ROOT; };
+		E0B213C82297298A006D9EDC /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; name = AppIcon.appiconset; path = iOS/AppIcon.appiconset; sourceTree = SOURCE_ROOT; };
+		E0BE24FD22985B8800AF9468 /* SimpleTasks2-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleTasks2-Bridging-Header.h"; sourceTree = "<group>"; };
+		E0BE24FE22985B8A00AF9468 /* MKiCloudSync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MKiCloudSync.h; sourceTree = "<group>"; };
+		E0BE24FF22985B8A00AF9468 /* MKiCloudSync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MKiCloudSync.m; sourceTree = "<group>"; };
 		E0EAE61D227D874A00AFD1B3 /* SimpleTasks2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimpleTasks2.entitlements; sourceTree = "<group>"; };
 		E0EAE61E227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E0EAE61F227D907500AFD1B3 /* ru */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ru; path = ru.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,16 +155,19 @@
 			isa = PBXGroup;
 			children = (
 				E0EAE61D227D874A00AFD1B3 /* SimpleTasks2.entitlements */,
+				E0BE24FE22985B8A00AF9468 /* MKiCloudSync.h */,
+				E0BE24FF22985B8A00AF9468 /* MKiCloudSync.m */,
 				E06860952278896200AACAC6 /* AppDelegate.swift */,
 				E06860C622788ACE00AACAC6 /* MainViewTableViewController.swift */,
 				E06860C822788CCD00AACAC6 /* Todolist.swift */,
 				E06860CA2278900E00AACAC6 /* AddTaskViewController.swift */,
 				E06860992278896200AACAC6 /* Main.storyboard */,
+				E0B213C82297298A006D9EDC /* AppIcon.appiconset */,
 				E068609F2278896700AACAC6 /* Assets.xcassets */,
-				E081261122909345007A6B72 /* AppIcon.appiconset */,
 				E06860A12278896700AACAC6 /* LaunchScreen.storyboard */,
 				E06860A42278896700AACAC6 /* Info.plist */,
 				E068609C2278896200AACAC6 /* SimpleTasks2.xcdatamodeld */,
+				E0BE24FD22985B8800AF9468 /* SimpleTasks2-Bridging-Header.h */,
 			);
 			path = SimpleTasks2;
 			sourceTree = "<group>";
@@ -194,7 +201,6 @@
 				E068608E2278896200AACAC6 /* Sources */,
 				E068608F2278896200AACAC6 /* Frameworks */,
 				E06860902278896200AACAC6 /* Resources */,
-				ACFCD121C357E570BAA033FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -255,6 +261,7 @@
 				TargetAttributes = {
 					E06860912278896200AACAC6 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 0;
@@ -303,7 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E081261222909345007A6B72 /* AppIcon.appiconset in Resources */,
+				E0B213C92297298A006D9EDC /* AppIcon.appiconset in Resources */,
 				E06860A32278896700AACAC6 /* LaunchScreen.storyboard in Resources */,
 				E06860A02278896700AACAC6 /* Assets.xcassets in Resources */,
 				E068609B2278896200AACAC6 /* Main.storyboard in Resources */,
@@ -381,26 +388,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ACFCD121C357E570BAA033FF /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SimpleTasks2/Pods-SimpleTasks2-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -412,6 +399,7 @@
 				E06860962278896200AACAC6 /* AppDelegate.swift in Sources */,
 				E068609E2278896200AACAC6 /* SimpleTasks2.xcdatamodeld in Sources */,
 				E06860C922788CCD00AACAC6 /* Todolist.swift in Sources */,
+				E0BE250022985B8A00AF9468 /* MKiCloudSync.m in Sources */,
 				E06860CB2278900E00AACAC6 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -592,6 +580,7 @@
 			baseConfigurationReference = A598B9A2B70B05BD75DB14B1 /* Pods-SimpleTasks2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Dela.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K52EJNPD2V;
@@ -603,6 +592,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "t-software.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleTasks2/SimpleTasks2-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -613,6 +604,7 @@
 			baseConfigurationReference = 2DE3CC159B74058012CA3131 /* Pods-SimpleTasks2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Dela.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K52EJNPD2V;
@@ -624,6 +616,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "t-software.Tasks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SimpleTasks2/SimpleTasks2-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

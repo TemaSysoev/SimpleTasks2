@@ -9,6 +9,64 @@
 import UIKit
 import UserNotifications
 import CoreData
+import CloudKit
+
+extension CKError {
+    public func isRecordNotFound() -> Bool {
+        return isZoneNotFound() || isUnknownItem()
+    }
+    public func isZoneNotFound() -> Bool {
+        return isSpecificErrorCode(code: .zoneNotFound)
+    }
+    public func isUnknownItem() -> Bool {
+        return isSpecificErrorCode(code: .unknownItem)
+    }
+    public func isConflict() -> Bool {
+        return isSpecificErrorCode(code: .serverRecordChanged)
+    }
+    public func isSpecificErrorCode(code: CKError.Code) -> Bool {
+        var match = false
+        if self.code == code {
+            match = true
+        }
+        else if self.code == .partialFailure {
+            guard let errors = partialErrorsByItemID else {
+                return false
+            }
+            for (_, error) in errors {
+                if let cke = error as? CKError {
+                    if cke.code == code {
+                        match = true
+                        break
+                    }
+                }
+            }
+        }
+        return match
+    }
+
+    public func getMergeRecords() -> (CKRecord?, CKRecord?) {
+        if code == .serverRecordChanged {
+            
+            return (clientRecord, serverRecord)
+        }
+        guard code == .partialFailure else {
+            return (nil, nil)
+        }
+        guard let errors = partialErrorsByItemID else {
+            return (nil, nil)
+        }
+        for (_, error) in errors {
+            if let cke = error as? CKError {
+                if cke.code == .serverRecordChanged {
+                    
+                    return cke.getMergeRecords()
+                }
+            }
+        }
+        return (nil, nil)
+    }
+}
 
 struct Public {
     static var tasks: [String] = [] //Массив задач
@@ -42,19 +100,24 @@ class MainViewTableViewController: UITableViewController {
     let darkModeColor = UIColor(red:0.12, green:0.13, blue:0.14, alpha:1.0) //Цвет backround для Темной темы
     func saveTasks(tasks:Array<Any>) { //Сохранение массива задач
         UserDefaults.standard.set(Public.tasks, forKey: "tasksKey")
+         MKiCloudSync.start(withPrefix: "tasks")
     }
     func loadTasks() -> Array<Any>{ //Чтение массива задач
         if UserDefaults.standard.array(forKey:"tasksKey") != nil {
+            MKiCloudSync.start(withPrefix: "tasks")
             return UserDefaults.standard.array(forKey:"tasksKey")!
         } else {return ["Hello"]}
         
     }
     
     func saveDoneCounter(tasks:Int) {
+        
         UserDefaults.standard.set(Public.doneTasksCouner, forKey: "tasksCounter")
+        MKiCloudSync.start(withPrefix: "tasks")
     }
     func loadDoneCounter() -> Int {
         if UserDefaults.standard.integer(forKey:"tasksCounter") != nil {
+             MKiCloudSync.start(withPrefix: "tasks")
             return UserDefaults.standard.integer(forKey:"tasksCounter")
         } else {return 0}
         
