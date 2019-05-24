@@ -1,0 +1,15 @@
+
+/* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+"37v-7U-nMT.title" = "☰";
+
+/* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+"GT0-Fo-P0d.title" = "Tareas";
+
+/* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+"TcH-u5-GQG.title" = "Total:";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+"W2K-Eo-MGa.normalTitle" = "Hecho";
+
+/* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+"oud-E2-yHc.placeholder" = "Nueva tarea";
