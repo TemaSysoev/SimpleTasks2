@@ -74,13 +74,7 @@ struct Public {
     static var doneTasksCouner = 0
 }
 
-struct System {
-    static func clearNavigationBar(forBar navBar: UINavigationBar) {
-        navBar.setBackgroundImage(UIImage(), for: .default)
-        navBar.shadowImage = UIImage()
-        navBar.isTranslucent = true
-    }
-}
+
 
 
 class MainViewTableViewController: UITableViewController {
@@ -96,9 +90,10 @@ class MainViewTableViewController: UITableViewController {
     
 
     
-    let darkModeSwitchBrightness = CGFloat(0.3)
+   
     let userDefults = UserDefaults.standard
-    let darkModeColor = UIColor(red:0.12, green:0.13, blue:0.14, alpha:1.0) //Цвет backround для Темной темы
+    
+    
     func saveTasks(tasks:Array<Any>) { //Сохранение массива задач
         //UserDefaults.standard.set(Public.tasks, forKey: "tasksKey")
         NSUbiquitousKeyValueStore.default.set(Public.tasks, forKey: "tasksKey")
@@ -149,27 +144,13 @@ class MainViewTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.prefersLargeTitles = true //большой красивый заголовк
-        navigationItem.hidesBackButton = true //Отключение кнопки Назад
+        //self.navigationController?.navigationBar.prefersLargeTitles = true //большой красивый заголовк
+        //navigationItem.hidesBackButton = true //Отключение кнопки Назад
         NSUbiquitousKeyValueStore.default.synchronize()
-        if let navController = navigationController {
-            System.clearNavigationBar(forBar: navController.navigationBar)
-            navController.view.backgroundColor = .clear
-        }
+       
         
      
-         if UIScreen.main.brightness < darkModeSwitchBrightness { //Настройка темной темы
-            self.navigationController!.navigationBar.tintColor = darkModeColor
-            self.navigationController?.navigationBar.barTintColor = darkModeColor
-            self.navigationController?.navigationBar.tintColor = .white
-            self.navigationController?.navigationBar.barStyle = .black
-            self.tableView.backgroundColor = darkModeColor
-            self.tableView.tintColor = darkModeColor
-            tableView.separatorColor = darkModeColor
-            addButtonItem.tintColor = .white
-            sortButton.tintColor = .white
-            toolBar.barTintColor = darkModeColor
-        }
+      
         toolBar.clipsToBounds = true //Привязка тулбара
        
         
@@ -208,11 +189,7 @@ class MainViewTableViewController: UITableViewController {
         let task = Public.tasks[indexPath.row] //Новый элемент массива
        
         cell.textLabel?.text = task
-       
-        if UIScreen.main.brightness < darkModeSwitchBrightness {
-            cell.backgroundColor = darkModeColor
-            cell.textLabel?.textColor = .white
-        }
+     
         
         /*Настройки отображения cell (на всякий)
         cell.layer.cornerRadius = 6
@@ -264,7 +241,7 @@ class MainViewTableViewController: UITableViewController {
     }
 
     func pushUpAction(at indexPath: IndexPath) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "↑"){_,_,_ in
+        let action = UIContextualAction(style: .normal, title: "\(UIApplicationShortcutIcon.IconType.favorite)"){_,_,_ in
             NSUbiquitousKeyValueStore.default.synchronize()
             let movingElement = Public.tasks.remove(at: indexPath.row)
             let index = IndexPath(row: 0, section: 0) //Первая позиция
@@ -288,30 +265,7 @@ class MainViewTableViewController: UITableViewController {
                 
                 Public.tasks[0] = String(task)
             
-            /*
-            if task[1] == "!" {
-                
-                if (task[0] == "9"){
-                    task[0] = "0"
-                } else{
-                    if task[0] == "0" {
-                    } else {
-                        let x = String(task[0])
-                        print(x)
-                        let xInt = Int(x)! + 1
-                        task[0] = Character("\(xInt)")
-                       // task[0] = Character("\u{00B9}")
-                    }
-                }
-    
-                Public.tasks[0] = String(task)
             
-            }else {
-                
-                Public.tasks[0] = "1! " + Public.tasks[0] //Добавление ! в название
-                
-            }
-            */
             self.tableView.reloadData()
             
             self.tableView.cellForRow(at: index)?.textLabel!.font = UIFont.boldSystemFont(ofSize: 18.0) //Изменение шрифта задачи
@@ -323,7 +277,7 @@ class MainViewTableViewController: UITableViewController {
         return action
     }
     func doneAction(at indexPath: IndexPath) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "✓"){_,_,_ in
+        let action = UIContextualAction(style: .normal, title: "\(UIApplicationShortcutIcon.IconType.confirmation)"){_,_,_ in
            
             Public.tasks.remove(at: indexPath.row)
            NSUbiquitousKeyValueStore.default.synchronize()

@@ -27,13 +27,6 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         
-      if UIScreen.main.brightness < CGFloat(0.3) {//Настройка темной темы
-            view.backgroundColor = darkModeColor
-            addButton.tintColor = .white
-            nameTextField.textColor = .white
-            nameTextField.keyboardAppearance = UIKeyboardAppearance.dark
-            
-        }
         self.nameTextField.delegate = self
         nameTextField.becomeFirstResponder()//Включение клавиатуры при входе
         addButton.layer.cornerRadius = 6 //красивы углы у кнопки
