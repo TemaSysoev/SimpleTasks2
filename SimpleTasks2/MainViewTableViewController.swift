@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import UserNotifications
+
 import CoreData
 import CloudKit
 
@@ -241,7 +241,7 @@ class MainViewTableViewController: UITableViewController {
     }
 
     func pushUpAction(at indexPath: IndexPath) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "\(UIApplicationShortcutIcon.IconType.favorite)"){_,_,_ in
+        let action = UIContextualAction(style: .normal, title: "↑"){_,_,_ in
             NSUbiquitousKeyValueStore.default.synchronize()
             let movingElement = Public.tasks.remove(at: indexPath.row)
             let index = IndexPath(row: 0, section: 0) //Первая позиция
@@ -258,12 +258,7 @@ class MainViewTableViewController: UITableViewController {
             if task[0] == "²" {
                 task[0] = "¹"
             }
-            
-                
-               
-                
-                
-                Public.tasks[0] = String(task)
+            Public.tasks[0] = String(task)
             
             
             self.tableView.reloadData()
@@ -272,12 +267,12 @@ class MainViewTableViewController: UITableViewController {
            
             self.saveTasks(tasks: Public.tasks)
         }
-        action.backgroundColor = UIColor(red:0.50, green:0.50, blue:0.50, alpha:1.0)//Задание цвета свайпа
+        action.backgroundColor = UIColor(red:0.00, green:0.59, blue:1.00, alpha:1.0)//Задание цвета свайпа
         
         return action
     }
     func doneAction(at indexPath: IndexPath) -> UIContextualAction {
-        let action = UIContextualAction(style: .normal, title: "\(UIApplicationShortcutIcon.IconType.confirmation)"){_,_,_ in
+        let action = UIContextualAction(style: .normal, title: "✓"){_,_,_ in
            
             Public.tasks.remove(at: indexPath.row)
            NSUbiquitousKeyValueStore.default.synchronize()
@@ -287,7 +282,7 @@ class MainViewTableViewController: UITableViewController {
             self.saveDoneCounter(tasks: Public.doneTasksCouner)
             self.saveTasks(tasks: Public.tasks)
         }
-        action.backgroundColor = UIColor(red:0.30, green:0.30, blue:0.30, alpha:1.0)//Задание цвета свайпа
+        action.backgroundColor = UIColor(red:0.00, green:0.59, blue:1.00, alpha:1.0)//Задание цвета свайпа
         
         return action
     }

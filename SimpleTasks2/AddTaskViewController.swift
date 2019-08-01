@@ -44,6 +44,9 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     
     }
     
+    @IBAction func cancelAction(_ sender: Any) {
+        dismissAction()
+    }
     
     
     
