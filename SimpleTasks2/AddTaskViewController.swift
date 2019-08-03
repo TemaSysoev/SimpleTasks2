@@ -51,12 +51,12 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     
     
     func addTaskAction() { //Добаление заадчи
-        if nameTextField.text != nil {
+        if nameTextField.text != "" {
             Public.newTaskPublic = "² " + nameTextField.text!
-            
-        } else {print("Error!")}
-        if nameTextField.text == ""{
-            Public.newTaskPublic = "² New tasks"
+            Public.tasks.append(Public.newTaskPublic) //добавление в массив
+            mainVC.tableView.reloadData() //Обновление TableView
+        } else {
+           dismissAction()
         }
         
         Public.tasks.append(Public.newTaskPublic) //добавление в массив
@@ -81,3 +81,142 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
     */
 
 }
+/*Localisations
+ uk
+ /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+ "37v-7U-nMT.title" = "☰";
+ 
+ /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+ "GT0-Fo-P0d.title" = "Справи";
+ 
+ /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+ "TcH-u5-GQG.title" = "Total:";
+ 
+ /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+ "W2K-Eo-MGa.normalTitle" = "Готово";
+ 
+ /* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+ "oud-E2-yHc.placeholder" = "Нове завдання";
+
+ 
+ sp
+ 
+ 
+ 
+ /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+ "37v-7U-nMT.title" = "☰";
+ 
+ /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+ "GT0-Fo-P0d.title" = "Tareas";
+ 
+ /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+ "TcH-u5-GQG.title" = "Total:";
+ 
+ /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+ "W2K-Eo-MGa.normalTitle" = "Hecho";
+ 
+ /* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+ "oud-E2-yHc.placeholder" = "Nueva tarea";
+
+ 
+ ch
+ 
+ /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+ "37v-7U-nMT.title" = "☰";
+ 
+ /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+ "GT0-Fo-P0d.title" = "任务";
+ 
+ /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+ "TcH-u5-GQG.title" = "Total:";
+ 
+ /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+ "W2K-Eo-MGa.normalTitle" = "完成";
+ 
+ /* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+ "oud-E2-yHc.placeholder" = "新任务";
+
+ 
+ fre
+ 
+ /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+ "37v-7U-nMT.title" = "☰";
+ 
+ /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+ "GT0-Fo-P0d.title" = "Les tâches";
+ 
+ /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+ "TcH-u5-GQG.title" = "Total:";
+ 
+ /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+ "W2K-Eo-MGa.normalTitle" = "Terminé";
+ 
+ /* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+ "oud-E2-yHc.placeholder" = "Nouvelle tâche";
+
+ 
+ 
+ 
+ it
+ 
+ 
+ /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+ "37v-7U-nMT.title" = "☰";
+ 
+ /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+ "GT0-Fo-P0d.title" = "Compiti";
+ 
+ /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+ "TcH-u5-GQG.title" = "Total:";
+ 
+ /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+ "W2K-Eo-MGa.normalTitle" = "Fatto";
+ 
+ /* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+ "oud-E2-yHc.placeholder" = "Nuovo compito";
+
+ 
+ 
+ 
+ gr
+ 
+ 
+ /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+ "37v-7U-nMT.title" = "☰";
+ 
+ /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+ "GT0-Fo-P0d.title" = "Καθήκοντα";
+ 
+ /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+ "TcH-u5-GQG.title" = "Total:";
+ 
+ /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+ "W2K-Eo-MGa.normalTitle" = "Έγινε";
+ 
+ /* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+ "oud-E2-yHc.placeholder" = "Νέα εργασία";
+
+ 
+ 
+ 
+ rus
+ 
+ 
+ /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
+ "37v-7U-nMT.title" = "☰";
+ 
+ /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
+ "GT0-Fo-P0d.title" = "Список дел";
+ 
+ /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
+ "TcH-u5-GQG.title" = "Всего:";
+ 
+ /* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
+ "W2K-Eo-MGa.normalTitle" = "Готово";
+ 
+ /* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
+ "oud-E2-yHc.placeholder" = "Новая задача";
+
+ 
+ 
+ */
