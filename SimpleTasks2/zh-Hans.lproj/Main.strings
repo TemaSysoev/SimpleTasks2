@@ -2,14 +2,17 @@
 /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
 "37v-7U-nMT.title" = "☰";
 
+/* Class = "UIButton"; normalTitle = "Add task"; ObjectID = "3Na-db-l6f"; */
+"3Na-db-l6f.normalTitle" = "添加任务";
+
+/* Class = "UITextField"; placeholder = "New task"; ObjectID = "CXc-2w-JNX"; */
+"CXc-2w-JNX.placeholder" = "新任务";
+
 /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
 "GT0-Fo-P0d.title" = "任务";
 
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "RgW-TY-KUy"; */
+"RgW-TY-KUy.normalTitle" = "取消";
+
 /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
-"TcH-u5-GQG.title" = "Total:";
-
-/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
-"W2K-Eo-MGa.normalTitle" = "完成";
-
-/* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
-"oud-E2-yHc.placeholder" = "新任务";
+"TcH-u5-GQG.title" = "总:";

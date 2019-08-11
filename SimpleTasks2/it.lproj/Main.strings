@@ -2,14 +2,17 @@
 /* Class = "UIBarButtonItem"; title = "☰"; ObjectID = "37v-7U-nMT"; */
 "37v-7U-nMT.title" = "☰";
 
+/* Class = "UIButton"; normalTitle = "Add task"; ObjectID = "3Na-db-l6f"; */
+"3Na-db-l6f.normalTitle" = "Aggiungi attività";
+
+/* Class = "UITextField"; placeholder = "New task"; ObjectID = "CXc-2w-JNX"; */
+"CXc-2w-JNX.placeholder" = "Nuovo compito";
+
 /* Class = "UINavigationItem"; title = "Tasks"; ObjectID = "GT0-Fo-P0d"; */
 "GT0-Fo-P0d.title" = "Compiti";
 
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "RgW-TY-KUy"; */
+"RgW-TY-KUy.normalTitle" = "Annulla";
+
 /* Class = "UIBarButtonItem"; title = "Total:"; ObjectID = "TcH-u5-GQG"; */
-"TcH-u5-GQG.title" = "Total:";
-
-/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "W2K-Eo-MGa"; */
-"W2K-Eo-MGa.normalTitle" = "Fatto";
-
-/* Class = "UITextField"; placeholder = "New task"; ObjectID = "oud-E2-yHc"; */
-"oud-E2-yHc.placeholder" = "Nuovo compito";
+"TcH-u5-GQG.title" = "Totale:";

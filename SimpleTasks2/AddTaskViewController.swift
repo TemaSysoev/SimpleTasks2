@@ -55,15 +55,12 @@ class AddTaskViewController: UIViewController, UITextFieldDelegate {
             Public.newTaskPublic = "² " + nameTextField.text!
             Public.tasks.append(Public.newTaskPublic) //добавление в массив
             mainVC.tableView.reloadData() //Обновление TableView
+            dismissAction() //закрытие экрана
         } else {
            dismissAction()
         }
         
-        Public.tasks.append(Public.newTaskPublic) //добавление в массив
-        mainVC.tableView.reloadData() //Обновление TableView
-        
-        
-        dismissAction() //закрытие экрана
+       
     }
     
     @objc func dismissAction() {

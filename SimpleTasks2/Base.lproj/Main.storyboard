@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gcR-pt-VKo">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14854.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gcR-pt-VKo">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14806.4"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="fce-3i-W8k">
-                            <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <items>
                                 <barButtonItem systemItem="add" id="SeZ-eq-BuY">
@@ -78,11 +76,19 @@
             <objects>
                 <viewController id="K9S-H3-Tz7" customClass="AddTaskViewController" customModule="SimpleTasks2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cBq-RU-Hq8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXc-2w-JNX">
+                                <rect key="frame" x="16" y="39" width="343" height="63"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="63" id="sXn-0h-DTY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Na-db-l6f">
-                                <rect key="frame" x="15" y="249" width="344" height="53"/>
+                                <rect key="frame" x="15" y="217" width="344" height="53"/>
                                 <color key="backgroundColor" red="0.0" green="0.58823529411764708" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="53" id="dPB-Ax-ScX"/>
@@ -95,36 +101,15 @@
                                     <action selector="addAction:" destination="K9S-H3-Tz7" eventType="touchUpInside" id="3Vy-Ac-1z4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXc-2w-JNX">
-                                <rect key="frame" x="16" y="183" width="343" height="33"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgW-TY-KUy">
-                                <rect key="frame" x="16" y="44" width="73" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="73" id="D6H-Tq-lTg"/>
-                                    <constraint firstAttribute="height" constant="30" id="iLp-yI-04q"/>
-                                </constraints>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelAction:" destination="K9S-H3-Tz7" eventType="touchUpInside" id="ibf-ec-CHs"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="RgW-TY-KUy" firstAttribute="leading" secondItem="lgo-xd-j5E" secondAttribute="leading" constant="16" id="0EX-Ic-dko"/>
                             <constraint firstItem="lgo-xd-j5E" firstAttribute="trailing" secondItem="3Na-db-l6f" secondAttribute="trailing" constant="16" id="8Zf-bp-tHl"/>
+                            <constraint firstItem="CXc-2w-JNX" firstAttribute="top" secondItem="lgo-xd-j5E" secondAttribute="top" constant="39" id="Aon-wu-h3S"/>
+                            <constraint firstItem="3Na-db-l6f" firstAttribute="top" secondItem="CXc-2w-JNX" secondAttribute="bottom" constant="115" id="NXi-Zh-6Rt"/>
                             <constraint firstItem="3Na-db-l6f" firstAttribute="leading" secondItem="lgo-xd-j5E" secondAttribute="leading" constant="15" id="PQD-Fl-pdk"/>
                             <constraint firstItem="lgo-xd-j5E" firstAttribute="trailing" secondItem="CXc-2w-JNX" secondAttribute="trailing" constant="16" id="Y1J-A7-bQp"/>
-                            <constraint firstItem="3Na-db-l6f" firstAttribute="top" secondItem="CXc-2w-JNX" secondAttribute="bottom" constant="33" id="YW9-Kc-NrU"/>
                             <constraint firstItem="CXc-2w-JNX" firstAttribute="leading" secondItem="lgo-xd-j5E" secondAttribute="leading" constant="16" id="hGO-PO-wMR"/>
-                            <constraint firstItem="CXc-2w-JNX" firstAttribute="top" secondItem="lgo-xd-j5E" secondAttribute="top" constant="139" id="kV0-dx-jMz"/>
-                            <constraint firstItem="RgW-TY-KUy" firstAttribute="top" secondItem="lgo-xd-j5E" secondAttribute="top" id="mp3-oB-e30"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lgo-xd-j5E"/>
                     </view>
@@ -145,13 +130,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="baG-9O-fno">
                         <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
-                        </textAttributes>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <color key="textShadowColor" cocoaTouchSystemColor="darkTextColor"/>
-                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="JGK-3d-cHY">
